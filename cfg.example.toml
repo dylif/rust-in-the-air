@@ -1,0 +1,5 @@
+[rust-in-the-air]
+mqtt_user = "ACCESS_TOKEN"
+mqtt_host = "your.mqtt.host"
+wifi_ssid = "secret_ssid"
+wifi_password = "secret_psk"
