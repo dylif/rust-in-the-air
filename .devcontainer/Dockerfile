@@ -9,7 +9,6 @@ ARG CONTAINER_USER=esp
 ARG CONTAINER_GROUP=esp
 ARG ESP_BOARD=all
 ARG GITHUB_TOKEN
-ARG DEVICE_GID
 
 # Install dependencies
 RUN apt-get update \
@@ -19,7 +18,6 @@ RUN apt-get update \
 
 # Set users
 RUN adduser --disabled-password --gecos "" ${CONTAINER_USER}
-RUN if [[ -n "$DEVICE_GID" ]]; then addgroup --gid ${DEVICE_GID} device && usermod -aG ${DEVICE_GID} ${CONTAINER_USER}; fi
 USER ${CONTAINER_USER}
 WORKDIR /home/${CONTAINER_USER}
 
