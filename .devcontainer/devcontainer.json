@@ -11,11 +11,12 @@
       "ESP_BOARD": "esp32s2"
     }
   },
-  "privileged": true,
   // https://github.com/serialport/serialport-rs/issues/153
   "runArgs": [
     "--mount",
-    "type=bind,source=/run/udev,target=/run/udev,readonly"
+    "type=bind,source=/run/udev,target=/run/udev,readonly",
+    "--device",
+    "/dev/ttyACM0"
   ],
   "customizations": {
     "vscode": {
