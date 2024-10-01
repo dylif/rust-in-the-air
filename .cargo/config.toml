@@ -20,4 +20,5 @@ ESP_IDF_VERSION = "v5.2.2"
 CRATE_CC_NO_DEFAULTS = "1"
 
 [alias]
-flash = "espflash flash --before no-reset --no-stub"
+flash = "espflash flash --before no-reset --after no-reset --no-stub"
+monitor = "espflash monitor --before no-reset-no-sync -c esp32s2"
