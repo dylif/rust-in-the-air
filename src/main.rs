@@ -106,7 +106,7 @@ fn main() -> Result<()> {
 
     let serial_number = sht4x
         .serial_number(&mut delay)
-        .map_err(|_| anyhow!("Sewer"))?;
+        .map_err(|_| anyhow!("Failed to get serial number"))?;
     log::info!("SHT4x serial number: {serial_number}");
 
     loop {
